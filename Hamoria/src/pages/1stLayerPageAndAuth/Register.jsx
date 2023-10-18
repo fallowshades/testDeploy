@@ -1,4 +1,4 @@
-import { Logo } from '../../components/1stLayerandInnerAuth'
+import { Logo, FormRow } from '../../Components/1stLayerandInnerAuth'
 import Wrapper from '../../assets/wrappers/auth'
 import { Link } from 'react-router-dom'
 
@@ -8,20 +8,12 @@ const Register = () => {
       <form className="form">
         <Logo />
         <h4>Register</h4>
-        <div className="form-row">
-          <label htmlFor="name" className="form-label">
-            name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="form-input"
-            defaultValue="john"
-            required
-          />
-        </div>
 
+        <FormRow type="text" name="lastName" labelText="last name" />
+        <FormRow type="text" name="location" />
+        <FormRow type="email" name="email" />
+
+        <FormRow type="password" name="password" />
         <button type="submit" className="btn btn-block">
           submit
         </button>
