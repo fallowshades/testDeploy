@@ -1,4 +1,4 @@
-const registerInteriorPage = () => {
+const RegisterInteriorPage = () => {
   return <div>registerInteriorPage</div>
 }
-export default registerInteriorPage
+export default RegisterInteriorPage
