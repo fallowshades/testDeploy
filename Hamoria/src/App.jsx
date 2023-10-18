@@ -29,52 +29,54 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
-  },
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/dashboard',
     children: [
       {
-        index: true,
-        element: <FeautureHome />,
+        path: 'register',
+        element: <Register />,
       },
       {
-        path: 'signs',
-        element: <Signs />,
+        path: 'login',
+        element: <Login />,
       },
       {
-        path: 'signs/:id',
-        element: <SingleSign />,
+        path: 'dashboard',
+        children: [
+          {
+            index: true,
+            element: <FeautureHome />,
+          },
+          {
+            path: 'signs',
+            element: <Signs />,
+          },
+          {
+            path: 'signs/:id',
+            element: <SingleSign />,
+          },
+          {
+            path: 'sigtn-list',
+            element: <SignList />,
+          },
+          { path: 'about', element: <About /> },
+          {
+            path: 'checkout',
+            element: <Checkout />,
+          },
+          {
+            path: 'orders',
+            element: <Orders />,
+          },
+        ],
       },
       {
-        path: 'sigtn-list',
-        element: <SignList />,
-      },
-      { path: 'about', element: <About /> },
-      {
-        path: 'checkout',
-        element: <Checkout />,
+        path: 'loginInterior',
+        element: <Login />,
       },
       {
-        path: 'orders',
-        element: <Orders />,
+        path: 'registerInterior',
+        element: <Register />,
       },
     ],
-  },
-  {
-    path: '/loginInterior',
-    element: <Login />,
-  },
-  {
-    path: '/registerInterior',
-    element: <Register />,
   },
 ])
 
