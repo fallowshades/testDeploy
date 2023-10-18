@@ -1,11 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
+import Logo from '../../Components/1stLayerandInnerLogIn/Logo'
 
 const HomeLayout = () => {
   return (
     <>
       <nav>
-        <span className="text-4xl text-primary">Hamoria</span>
+        <Logo />
       </nav>
       <Outlet />
     </>
