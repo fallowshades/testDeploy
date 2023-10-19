@@ -74,12 +74,12 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: 'loginInterior',
-        element: <Login />,
+        path: 'login-interior',
+        element: <LoginInteriorPage />,
       },
       {
-        path: 'registerInterior',
-        element: <Register />,
+        path: 'register-interior',
+        element: <RegisterInteriorPage />,
       },
     ],
   },
